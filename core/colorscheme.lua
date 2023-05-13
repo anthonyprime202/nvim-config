@@ -4,10 +4,10 @@ if not status_ok then
 	return
 end
 
--- catppuccin.setup({
--- 	flavour = "mocha",
--- 	termcolors = false,
--- 	show_end_of_buffer = false,
--- })
+catppuccin.setup({
+	flavour = "mocha",
+	termcolors = true,
+	show_end_of_buffer = false,
+})
 
-vim.cmd([[ colorscheme catppuccin-mocha ]])
+vim.cmd([[ colorscheme catppuccin ]])
