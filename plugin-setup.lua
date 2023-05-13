@@ -80,7 +80,9 @@ return packer.startup(function(use)
 	-- Syntax Improvements
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate",
+		run = function()
+			require("nvim-treesitter.install").update({ with_sync = true })
+		end,
 	})
 	use({
 		"numToStr/Comment.nvim",
@@ -105,7 +107,6 @@ return packer.startup(function(use)
 	use({ "akinsho/toggleterm.nvim" })
 
 	-- Visual Improvements
-	use({ "goolord/alpha-nvim" })
 	use({ "lukas-reineke/indent-blankline.nvim" })
 	use({ "nvim-lualine/lualine.nvim" })
 	use({ "lewis6991/gitsigns.nvim" })
